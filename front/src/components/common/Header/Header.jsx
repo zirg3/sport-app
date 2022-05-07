@@ -1,21 +1,12 @@
 import React from 'react';
-import styles from './Header.module.scss'
-
 import userImage from '../../../images/header/user.svg'
-import HamburgerImage from '../../../images/header/hamburger.svg'
+import Hamburger from './Hamburger/Hamburger';
+import styles from './Header.module.scss'
 
 const Header = () => {
   return (
       <header className={styles.header}>
-        <button type='button'>
-          <img
-              src={HamburgerImage}
-              width='29'
-              height='23'
-              alt='back'
-              draggable={false}
-          />
-        </button>
+        <Hamburger />
         <button type='button'>
           <img
               src={userImage}

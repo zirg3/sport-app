@@ -1,12 +1,20 @@
 import React from 'react';
 import Home from './components/pages/Home/Home';
-import Layout from './components/Layout';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from 'react-router-dom';
+import NewWorkout from './components/pages/NewWorkout/NewWorkout';
 
 const App = () => {
   return (
-      <Layout>
-        <Home />
-      </Layout>
+      <Router>
+        <Routes>
+          <Route path="/" exact element={<Home />}/>
+          <Route path="/new-workout" element={<NewWorkout/>}/>
+        </Routes>
+      </Router>
   );
 };
 
