@@ -9,7 +9,7 @@ import {useNavigate}  from 'react-router-dom'
 const Home = () => {
   const navigate = useNavigate()
   return (
-        <Layout height='100%' bgImage={bgImage}>
+        <Layout bgImage={bgImage}>
           <Button text='Новая тренировка' styleBtn='button' callback={() => navigate('/new-workout')}/>
           <h1 className={styles.heading}>Название тренировки</h1>
           <Counters/>
