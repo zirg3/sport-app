@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Field.module.scss'
 
-const Field = ({placeholder, value, onChange, type = 'text'}) => {
+const Field = ({placeholder, value, onChange, type = 'text', required}) => {
   return (
       <input
           className={styles.input}
@@ -9,6 +9,7 @@ const Field = ({placeholder, value, onChange, type = 'text'}) => {
           type={type}
           value={value}
           onChange={onChange}
+          required={required}
       />
   );
 };

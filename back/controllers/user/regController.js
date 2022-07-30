@@ -10,9 +10,12 @@ export const registerUser =  asyncHandler(async(req,res) => {
   const isHaveUser = await User.findOne({email})
   const isHaveUserLogin = await User.findOne({login})
 
-  if (isHaveUser || isHaveUserLogin) {
+  if (isHaveUser) {
     res.status(400)
     throw new Error('Пользователь уже зарегистрирован')
+  } else if(isHaveUserLogin) {
+    res.status(400)
+    throw new Error('Логин занят')
   }
 
   const user = await User.create({email,password, login})

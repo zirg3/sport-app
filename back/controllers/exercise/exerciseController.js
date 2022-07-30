@@ -6,9 +6,9 @@ import Workout from '../../models/workoutModel.js';
 // @access private
 
 export const addNewExercise = asyncHandler(async (req,res) => {
-  const {name, times, imageId} = req.body
+  const {name, times, imageName} = req.body
 
-  const exercise = await Exercise.create({name, times, imageId})
+  const exercise = await Exercise.create({name, times, imageName})
 
   res.json(exercise)
 })
@@ -17,7 +17,7 @@ export const addNewExercise = asyncHandler(async (req,res) => {
 // @access private
 
 export const updateExercise = asyncHandler(async (req, res) => {
-  const {name, times, imageId, exerciseId} = req.body
+  const {name, times, imageName, exerciseId} = req.body
 
   let exercise = await Exercise.findById(exerciseId)
 
@@ -28,7 +28,7 @@ export const updateExercise = asyncHandler(async (req, res) => {
 
   exercise.name = name
   exercise.times = times
-  exercise.imageId = imageId
+  exercise.imageName = imageName
 
   const updatedExercise = await exercise.save()
 
