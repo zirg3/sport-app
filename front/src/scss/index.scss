@@ -2,9 +2,19 @@
 
 body {
   background-color: $black;
+  position: relative;
   padding: 0;
   margin: 0;
   color: #fff;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/bg-main.svg");
+  z-index: -1;
 }
 
 * {
@@ -70,6 +80,7 @@ img {
 
 #root {
   height: 100%;
+  position: relative;
 }
 
 .select2-selection {

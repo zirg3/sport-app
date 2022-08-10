@@ -6,7 +6,7 @@
   flex-direction: column;
 
   height: 100%;
-  max-width: 660px;
+  max-width: 900px;
   width: 100%;
 
   padding: 25px;
@@ -20,9 +20,9 @@
     height: 280px;
     border-radius: 0 0 20px 20px;
     box-shadow: $bx-accent;
-    @media (max-width: $mobile) {
-      height: 260px !important;
-    }
+    //@media (max-width: $mobile) {
+    //  height: 260px !important;
+    //}
   }
 }
 

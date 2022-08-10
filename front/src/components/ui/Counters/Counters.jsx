@@ -1,20 +1,23 @@
 import React from 'react';
 import styles from './Counters.module.scss'
+import cn from 'classnames'
 
-const Counters = ({minutes, workouts, kg = 0}) => {
+const Counters = ({minutes, workouts, kg = 0, type}) => {
   return (
-      <div className={styles.wrapper}>
+      <div className={cn(styles.wrapper, {
+        [styles.profile]: type === 'profile'
+      })}>
           <div className={styles.count}>
-            <div className='heading'>Минуты</div>
-            <div className='number'>{minutes}</div>
+            <div className={styles.heading}>Минуты</div>
+            <div className={styles.number}>{minutes}</div>
           </div>
           <div className={styles.count}>
-            <div className='heading'>Тренировки</div>
-            <div className='number'>{workouts}</div>
+            <div className={styles.heading}>Тренировки</div>
+            <div className={styles.number}>{workouts}</div>
           </div>
           <div className={styles.count}>
-            <div className='heading'>Кг</div>
-            <div className='number'>{kg}</div>
+            <div className={styles.heading}>Кг</div>
+            <div className={styles.number}>{kg}</div>
           </div>
       </div>
   );

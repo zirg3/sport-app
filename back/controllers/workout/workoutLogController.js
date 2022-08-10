@@ -9,7 +9,7 @@ import ExerciseLog from '../../models/exerciseLogModel.js';
 export const createNewWorkoutLog = asyncHandler(async (req, res) => {
   const {workoutId} = req.body
 
-  const user = req.user._id
+  // const user = req.user._id
 
   const workout = await Workout.findById(workoutId).populate('exercises')
 

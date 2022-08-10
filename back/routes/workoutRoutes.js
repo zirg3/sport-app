@@ -12,7 +12,11 @@ import {updateCompleteWorkoutLog} from '../controllers/workout/workoutLogControl
 //   /api/workouts
 const router = express.Router()
 
-router.route('/').post(protect, addNewWorkout).get(protect, getWorkouts).put(protect, updateWorkout).delete(protect, deleteWorkout)
+router.route('/')
+    .post(protect, addNewWorkout)
+    .get(protect, getWorkouts)
+    .put(protect, updateWorkout)
+    .delete(protect, deleteWorkout)
 router.route('/log').post(protect, createNewWorkoutLog).put(protect, updateCompleteWorkoutLog)
 router.route('/log/:id').get(protect, getWorkoutLog)
 router.route('/:id').get(protect, getWorkout)

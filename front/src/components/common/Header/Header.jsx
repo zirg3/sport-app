@@ -22,7 +22,7 @@ const Header = () => {
             (<button type='button' onClick={() => navigate(-1)}>
               <img
                   src={arrowImage}
-                  alt='Auth'
+                  alt='Profile'
                   height='40'
                   width='40'
                   draggable={false}
@@ -32,7 +32,7 @@ const Header = () => {
              <div className={stylesHamb.wrapper}><button type='button' onClick={() => navigate(isAuth ? '/profile' : '/auth')}>
               <img
                   src={isAuth ? authImage : userImage}
-                  alt='Auth'
+                  alt='Profile'
                   height='40'
                   width='40'
                   draggable={false}

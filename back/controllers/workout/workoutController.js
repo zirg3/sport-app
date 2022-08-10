@@ -11,7 +11,6 @@ export const addNewWorkout =  asyncHandler(async(req,res) => {
   const workout = await Workout.create({name, exercises: exerciseId})
 
   res.json(workout)
-
 })
 
 // @route  GET /api/workouts/:id Получить тренировку
