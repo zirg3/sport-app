@@ -15,19 +15,5 @@ module.exports = function(app) {
         changeOrigin: true,
       })
   );
-  app.use(
-      '/api',
-      createProxyMiddleware({
-        target: 'mongodb+srv://sport-app:Oleg3456@cluster0.66rgyqd.mongodb.net/test',
-        changeOrigin: true,
-      })
-  );
-  app.use(
-      '/uploads',
-      createProxyMiddleware({
-        target: 'mongodb+srv://sport-app:Oleg3456@cluster0.66rgyqd.mongodb.net/test',
-        changeOrigin: true,
-      })
-  );
 };
 
