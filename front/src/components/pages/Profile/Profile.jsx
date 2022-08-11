@@ -23,7 +23,7 @@ const Profile = () => {
         refetchOnWindowFocus: false,
       }
   )
-
+  console.log(12)
   return (
       <>
         <div
@@ -46,7 +46,7 @@ const Profile = () => {
               <Counters
                   minutes={data.minutes}
                   workouts={data.workouts}
-                  kgs={data.kgs}
+                  kg={data.kg}
                   type='profile'
               />
           )}
