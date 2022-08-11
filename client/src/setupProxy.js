@@ -4,14 +4,14 @@ module.exports = function(app) {
   app.use(
       '/api',
       createProxyMiddleware({
-        target: 'https://sport-app-test.herokuapp.com/',
+        target: 'http://localhost:5000',
         changeOrigin: true,
       })
   );
   app.use(
       '/uploads',
       createProxyMiddleware({
-        target: 'https://sport-app-test.herokuapp.com/',
+        target: 'http://localhost:5000',
         changeOrigin: true,
       })
   );
